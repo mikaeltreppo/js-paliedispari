@@ -4,20 +4,19 @@
  // somma numeri
  // stabiliamo se somma è pari o dispari
  // dichiariamo il vincitore
+
+
+ 
 let numberDom = document.getElementById('number');
 let chooseDom = document.getElementById('choose');
 let checkDom = document.getElementById('check');
 
-
-
-let oddEven = chooseDom.value;
-
 checkDom.addEventListener('click',
 function(){
+let oddEven = chooseDom.value;
 let numUser = parseInt(numberDom.value);
-let numPc = Math.floor((Math.random() * 5 ) + 1);
+let numPc = parseInt( Math.floor((Math.random() * 5 ) + 1));
 oddEvenGame(numUser, numPc, oddEven);
-
 }
 )
 
