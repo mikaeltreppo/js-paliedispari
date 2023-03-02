@@ -4,8 +4,19 @@
 // riunire le lettere 
 // confrontare parola iniziale e parola finale
 // se uguali allora è palindroma
-let test = prompt('inserisci parola');
-palindroma(test);
+let wordDom = document.getElementById("word");
+let checkDom = document.getElementById("check");
+let test = wordDom.value;
+let refreshDom = document.getElementById('refresh');
+checkDom.addEventListener('click', function (){
+    palindroma(test);
+
+});
+refreshDom.addEventListener('click', function (){
+location.reload();
+});
+
+
 
 
 function palindroma(word) {
