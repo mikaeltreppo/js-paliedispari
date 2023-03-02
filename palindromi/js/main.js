@@ -15,6 +15,8 @@ function palindroma(word) {
     console.log(wordReverse);
     let wordJoin = wordReverse.join('');
     console.log(wordJoin);
+
+
     if (wordJoin == word) {
         alert('è palindroma!')
     }
