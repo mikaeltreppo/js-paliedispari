@@ -6,20 +6,13 @@
 // se uguali allora è palindroma
 let wordDom = document.getElementById("word");
 let checkDom = document.getElementById("check");
-let test = wordDom.value;
-let refreshDom = document.getElementById('refresh');
 checkDom.addEventListener('click', function (){
+    let test = wordDom.value; 
     palindroma(test);
-
+    wordDom.value = '';
 });
-refreshDom.addEventListener('click', function (){
-location.reload();
-});
-
-
-
-
 function palindroma(word) {
+    
     let wordSplit = word.split('');
     console.log(wordSplit);
     let wordReverse = wordSplit.reverse();
