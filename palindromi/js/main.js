@@ -4,8 +4,8 @@
 // riunire le lettere 
 // confrontare parola iniziale e parola finale
 // se uguali allora è palindroma
-
-palindroma('pippo');
+let test = prompt('inserisci parola');
+palindroma(test);
 
 
 function palindroma(word) {
@@ -16,9 +16,9 @@ function palindroma(word) {
     let wordJoin = wordReverse.join('');
     console.log(wordJoin);
     if (wordJoin == word) {
-        console.log('è palindroma!')
+        alert('è palindroma!')
     }
     else {
-        console.log('non è palindroma, prova un altra parola')
+        alert('non è palindroma, prova un altra parola')
     }
 }
