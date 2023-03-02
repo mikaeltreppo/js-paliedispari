@@ -4,13 +4,25 @@
  // somma numeri
  // stabiliamo se somma è pari o dispari
  // dichiariamo il vincitore
+let numberDom = document.getElementById('number');
+let chooseDom = document.getElementById('choose');
+let checkDom = document.getElementById('check');
 
 
-let numUser =  parseInt(prompt("scegli un numero da 1 a 5"));
+
+let oddEven = chooseDom.value;
+
+checkDom.addEventListener('click',
+function(){
+let numUser = parseInt(numberDom.value);
 let numPc = Math.floor((Math.random() * 5 ) + 1);
-let oddEven = prompt('scrivi pari o dispari');
+oddEvenGame(numUser, numPc, oddEven);
 
-oddEvenGame(numUser, numPc, oddEven)
+}
+)
+
+
+
 
 
 
@@ -21,11 +33,11 @@ function oddEvenGame (a,b,c){
  if (sum % 2 == 0 && c == "pari"){
     alert ("hai vinto è pari! il risultato è " + sum);
  }
- else if (sum % 2 !== 0 && c == "dispari"){
+ else if (sum % 2 == 1 && c == "dispari"){
     alert ("hai vinto è dispari! il risultato è " + sum)
  }
 else {
-    alert("hai pers! il risultato è " + sum)  
+    alert("hai perso! il risultato è " + sum)  
 }
 
 }
